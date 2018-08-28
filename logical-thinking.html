@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <meta name="description" content="ロジカルシンキング講座" />
+    <meta name="author" content="Kotaro Yamaguchi" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<!-- サポートされていないブラウザで開いた時 -->
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+<!-- タイトル・自己紹介・導入 -->
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q><b>ロジカルシンキング講座</b></q>
+    </div>
+    <div class="step slide" data-x="0" data-y="-1500" style="text-align:center">
+      <q><strong>自己紹介</strong></p>
+      <span style="font-size:20pt;">
+        セラク株式会社　山口 浩太郎</br>
+      </span>
+      <img src="./images/self-introduction.jpg" style="max-width: 60%">
+    </div>
+    <div class="step" data-x="1000" data-y="-1500">
+      <p>アリストテレス</strong>曰く、人を説得するための三要素は</p>
+      <p><span class="noticed">・ロゴス</span></p>
+    </div>
+    <div id="its-in-3d" class="step" data-x="1500" data-y="-1410" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">・<b>エトス</b></span> <span class="you">・<b>パトス</b></span></p>
+    </div>
+    <div class="step slide" data-x="2000" data-y="-1500">
+      <q><strong>自己紹介</strong></q>
+      <span style="font-size:20pt;">
+        <u>セラク株式会社</u>　山口 浩太郎</br>
+        物理学科卒・数学応用数理専攻修了後エンジニアとして就業。</br>
+        その後、学士編入試験を志すも、エンジニアとしての可能性に気づき、
+        2017年株式会社セラクへ入社。</br>
+        エンジニアとしてのキャリアを再スタートし、
+        現在、企業内のクラウドシステム化を目指した研修業務に携わる。
+      </span>
+    </div>
+    <div id="ing" class="step slide" data-x="3000" data-y="-1500">
+      <q><strong>背景</strong></q>
+      <span style="font-size:20pt;">
+        理系出身者であれば論理的な思考ができるのか？</br>
+        </br>
+      </span>
+      <b class="rotating">NO</b>
+    </div>
+    <div class="step slide" data-x="4000" data-y="-1500">
+      <q><strong>目的</strong></q>
+      <span style="font-size:20pt;">
+        本講義が論理的思考を理解するためのきっかけとなること。</br>
+        すなわち、十分な理解は求めていません。そのため、厳密な定義は割愛し、平易な言葉を用い、イメージを多用しています。
+      </span>
+    </div>
+<!-- 論理的に考えるとは -->
+    <div class="step" data-x="0" data-y="0" data-scale="1">
+      <q><strong>論理的に考える</strong>とは、物事を<strong>集まり</strong>として考えるということである。</q>
+      <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+    </div>
+    <div class="step" data-x="0" data-y="0" data-z="-2000" data-scale="1">
+        <p><b>論理から連想されがちなもの</b></p>
+        <ul>
+          <li>語彙力</li>
+          <li>性格</li>
+        </ul>
+    </div>
+    <div class="step" data-x="1000" data-y="0" data-z="0" data-scale="1">
+      <p><b>集まりとして考えるとは？</b></p>
+      <ul>
+        <li>含まれる・含まれないを考えるということ</li>
+        <li>包まれる・包まれないを考えるということ</li>
+      </ul>
+    </div>
+    <div class="step" data-x="2000" data-y="0" data-z="0" data-scale="1">
+      <p><b>含まれる・含まれない</b></p>
+    </div>
+    <div class="step" data-x="2000" data-y="0" data-z="-2000" data-scale="1">
+      <p><b>含まれる</b></p>
+      <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+    </div>
+    <div class="step" data-x="2000" data-y="0" data-z="-4000" data-scale="1">
+      <p><b>含まれない</b></p>
+      <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+    </div>
+    <div class="step" data-x="3000" data-y="0" data-z="0" data-scale="1">
+      <p><b>包まれる・包まれない</b></p>
+    </div>
+    <div class="step" data-x="3000" data-y="0" data-z="-2000" data-scale="1">
+      <p><b>包まれる</b></p>
+      <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+    </div>
+    <div class="step" data-x="3000" data-y="0" data-z="-4000" data-scale="1">
+      <p><b>包まれない</b></p>
+      <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+    </div>
+    <div class="step" data-x="4000" data-y="0" data-z="0" data-scale="1">
+      <p><b>集まりと同等の言葉を探そう</b></p>
+      <ul>
+        <li>条件</li>
+        <li>性質</li>
+        <li>必要</li>
+        <li>十分</li>
+        <li>目的</li>
+        <li>手段</li>
+      </ul>
+      ...etc
+    </div>
+<!-- 条件 -->
+<div class="step" data-x="0" data-y="1500" data-scale="1">
+  <q><strong>条件</strong></q>
+</div>
+<div class="step" data-x="0" data-y="1500" data-z="-2000" data-scale="1">
+    <p><b>条件から連想されるもの</b></p>
+    <ul>
+      <li>if文</li>
+      <li>switch-case文</li>
+      <li>募集要項</li>
+    </ul>
+    ...etc
+</div>
+  <!-- 条件_図解_条件は集合 -->
+<div class="step" data-x="1000" data-y="1500" data-z="0" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+<div class="step" data-x="1000" data-y="1500" data-z="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+<div class="step" data-x="1000" data-y="1500" data-z="-4000" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+  <!-- 条件_図解_集合は条件 -->
+<div class="step" data-x="2000" data-y="1500" data-z="0" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+<div class="step" data-x="2000" data-y="1500" data-z="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+<div class="step" data-x="2000" data-y="1500" data-z="-4000" data-scale="1">
+  <q style="text-align:center"><img src="./images/self-introduction.jpg" style="max-width: 50%"></q>
+</div>
+  <!-- 条件とは -->
+<div class="step" data-x="3000" data-y="1500" data-z="0" data-scale="1">
+  <q><strong>条件とは</strong></q>
+  <span style="font-size:20pt;">
+    </br>条件はその条件を満たすか否かによって物事の集まりを定めます。 </br>
+    その一方で、物事の集まりはその集まりに含まれるか否かによって条件を定めます。</br>
+    すなわち、<b>条件</b>とは<b>物事</b>の集まりそのものなのです。
+  </span>
+</div>
+<div class="step" data-x="3000" data-y="1500" data-z="-2000" data-scale="1">
+  <span style="font-size:30pt;">
+    <ul>
+      <li>外延的記法（がいえんてききほう）</br>要素を１つ１つ並べて集まりを表現</li>
+      <li>内包的記法（ないほうてききほう）</br>言葉や式で集まりを表現</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="3000" data-y="1500" data-z="-4000" data-scale="1">
+  <q><strong>換言</strong></q>
+  <span style="font-size:20pt;">
+    </br>「九州生まれの人」</br>
+    「沖縄または鹿児島または宮崎または熊本または大分または福岡または佐賀または長崎生まれの人」
+  </span>
+</div>
+<!-- 条件_まとめ -->
+<div id="overview" class="step" data-x="1500" data-y="1500" data-z="0" data-scale="3">
+</div>
+<!-- 状況整理 -->
+<div class="step slide" data-x="0" data-y="3000" data-z="0" data-scale="1">
+  <q><strong>ここまで</strong></q>
+  <span style="font-size:20pt;">
+    条件というキーワードは「含まれる・含まれない」に関することだった。
+    しかし、まだ、この考えやキーワードがどのように論理へと結びつくのか想像できない。。。
+  </span>
+  <q><strong>これから</strong></q>
+  <span style="font-size:20pt;">
+    必要や十分、そして目的や手段といったキーワードから「包まれる・包まれない」を考える。
+  </span>
+</div>
+
+<!-- 必要・十分 -->
+<div class="step" data-x="0" data-y="4500" data-z="0" data-scale="1">
+  <q><strong>必要・十分</strong></q>
+</div>
+<div class="step" data-x="1000" data-y="4500" data-z="0" data-scale="1">
+  <q><strong>必要</strong></q>
+  <span style="font-size:20pt;">
+  </br>言葉の定義と日常用語としての意味に乖離があるため、</br>
+    意味や使われ方を再確認したい。
+  </span>
+</div>
+<div class="step" data-x="2000" data-y="4500" data-z="0" data-scale="1">
+  <q><strong>日常的な必要の意味</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>あればより良いこと。</li>
+      <li>経験的に必ず要る。</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="2000" data-y="4500" data-z="-2000" data-scale="1">
+  <q><strong>日常的な必要の使われ方</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>遠足には運動靴が必要だ。</li>
+      <li>遊園地には観覧車が必要だ。</li>
+      <li>紐を切るためにハサミが必要だ。</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="3000" data-y="4500" data-z="0" data-scale="1">
+  <q><strong>必要の定義</strong></q>
+  <span style="font-size:20pt;">
+  </br>必ず要ること。
+  </span>
+</div>
+<div class="step" data-x="3000" data-y="4500" data-z="0" data-scale="1">
+  <q><strong>必要を論理の道具として扱うには</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </span>
+</div>
+
+<!-- 全体_まとめ -->
+<div id="overview-whole" class="step" data-x="1500" data-y="1500" data-z="0" data-scale="9">
+</div>
+
+
+</div>
+<div id="impress-toolbar"></div>
+<div class="hint">
+    <p>～誤解を生まないコミュニケーションに重要な論理的思考～</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
