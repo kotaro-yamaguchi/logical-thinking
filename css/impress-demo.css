@@ -597,6 +597,8 @@ a:focus {
 
 */
 #overview { display: none }
+#overview-sets { display: none }
+#overview-relations { display: none }
 #overview-whole { display: none }
 
 /*
