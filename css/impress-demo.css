@@ -57,9 +57,88 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
+/********************************* mine **/
+.white {
+  color:white;
+}
+
+.red {
+  color:red;
+}
+
+.blue {
+  color:blue;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+ul {
+   /*position:relative;
+   float:left;
+   left:50%;*/
+   margin: 0 0 0 5%;
+}
+
+ul li {
+   /*position:relative;
+   left:-50%;*/
+   margin: 0 0 0 2em;
+   padding: 5px;
+}
+
+ul.lowmargin {
+  font-size:36px;
+  font-weight:bold;
+  margin:20px 0 0;
+  padding:20px 0 0;
+}
+
+ul.middlemargin {
+  font-size:36px;
+  font-weight:bold;
+  margin:100px 0 0;
+  padding:40px 0 0;
+}
+
+ul.center {
+  list-style:none;
+  text-align: center;
+  font-size:48px;
+  font-weight:bold;
+  margin:100px 0 0;
+  padding:40px 0 0;
+}
+
+ul.center li {
+   margin: 0 20px 0;
+   padding:40px 0 0;
+}
+
+ul.point {
+  list-style-image:url("../images/point.png");
+  font-size:48px;
+  font-weight:bold;
+  margin:100px 0 0;
+  padding:20px 0 0;
+}
+
+ul.middlemargin,ul.center,ul.point,ul.nonetop li {
+  margin-bottom:20px;
+}
+
+.vcenter {
+  margin:0 auto;
+}
+
+/********************************* mine **/
+/*
 ol, ul {
     list-style: none;
 }
+*/
+
 blockquote, q {
     quotes: none;
 }
@@ -317,7 +396,7 @@ a:focus {
 /*
     This step has some animated text ...
 */
-#ing { width: 500px }
+#ing { width: 1000px }
 
 /*
     ... so we define display to `inline-block` to enable transforms and
@@ -518,6 +597,9 @@ a:focus {
 
 */
 #overview { display: none }
+#overview-sets { display: none }
+#overview-relations { display: none }
+#overview-whole { display: none }
 
 /*
     We also make other steps visible and give them a pointer cursor using the
