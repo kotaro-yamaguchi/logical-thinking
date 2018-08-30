@@ -596,10 +596,23 @@ a:focus {
     to be able to click on other steps.
 
 */
-#overview { display: none }
-#overview-sets { display: none }
-#overview-relations { display: none }
-#overview-whole { display: none }
+#overview-set {}
+.impress-on-overview-set .step {
+    opacity: 1;
+}
+
+#overview-relation {}
+.impress-on-overview-relation .step {
+    opacity: 1;
+}
+
+#overview-purpose {}
+.impress-on-overview-purpose .step {
+    opacity: 1;
+}
+
+
+#overview {}
 
 /*
     We also make other steps visible and give them a pointer cursor using the
@@ -607,7 +620,6 @@ a:focus {
 */
 .impress-on-overview .step {
     opacity: 1;
-    cursor: pointer;
 }
 
 /*
