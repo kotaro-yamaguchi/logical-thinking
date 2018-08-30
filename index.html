@@ -1,456 +1,435 @@
 <!doctype html>
-
-<!--
-
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____                  
-                            _.' :  `._               
-                        .-.'`.  ;   .'`.-.           
-               __      / : ___\ ;  /___ ; \      __  
-             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
-             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
-                  `:-.._J '-.-'L__ `-.-' L_..-;'     
-                    "-.__ ;  .-"  "-.  : __.-"       
-                        L ' /.======.\ ' J           
-                         "-.   "__"   .-"            
-                        __.l"-:_JL_;-";.__           
-                     .-j/'.;  ;""""  / .'\"-.        
-                   .' /:`. "-.:     .-" .';  `.      
-                .-"  / ;  "-. "-..-" .-"  :    "-.   
-             .+"-.  : :      "-.__.-"      ;-._   \  
-             ; \  `.; ;                    : : "+. ; 
-             :  ;   ; ;                    : ;  : \: 
-             ;  :   ; :                    ;:   ;  : 
-            : \  ;  :  ;                  : ;  /  :: 
-            ;  ; :   ; :                  ;   :   ;: 
-            :  :  ;  :  ;                : :  ;  : ; 
-            ;\    :   ; :                ; ;     ; ; 
-            : `."-;   :  ;              :  ;    /  ; 
-             ;    -:   ; :              ;  : .-"   : 
-             :\     \  :  ;            : \.-"      : 
-              ;`.    \  ; :            ;.'_..-=  / ; 
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
-                    \ / .-"   /.     .'.' ;_:'    ;  
-                     :-""-.`./-.'     /    `.___.'   
-                           \ `t  ._  /               
-                            "-.t-._:'                
-
--->
-
-<!--
-    
-    So you'd like to know how to use impress.js?
-    
-    You've made the first, very important step - you're reading the source code.
-    And that's how impress.js presentations are built - with HTML and CSS code.
-    
-    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
-    More importantly, you need to be a designer. There are no default styles or layouts for impress.js presentations.
-    
-    You need to design and build it by hand.
-    
-    So...
-    
-    Would you still like to know how to use impress.js?
-    
--->
-
-<html lang="en">
+<html lang="jp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
-
+    <meta name="description" content="ロジカルシンキング講座" />
+    <meta name="author" content="Kotaro Yamaguchi" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
-
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
     <link href="css/impress-demo.css" rel="stylesheet" />
-    
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
+<!-- サポートされていないブラウザで開いた時 -->
 <body class="impress-not-supported">
-
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <q>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</q>
+    <q>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</q>
+</div>
+<div id="impress">
+<!-- タイトル・自己紹介・導入 -->
+    <div id="bored" class="step slide" data-x="0" data-y="0">
+        <q><b>ロジカルシンキング講座</b></q>
+    </div>
+    <div class="step slide" data-x="1000" data-y="0" style="text-align:center">
+      <q><strong>自己紹介</strong></q>
+      <img src="./images/self-introduction.jpg" style="max-width: 70%">
+    </div>
+    <div class="step" data-x="1000" data-y="1000">
+      <q>アリストテレス</strong>曰く、人を説得するための三要素は</q>
+      <q><span class="noticed">・ロゴス</span></q>
+    </div>
+    <div id="its-in-3d" class="step" data-x="1500" data-y="1090" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <q><span class="have">・<b>エトス</b></span> <span class="you">・<b>パトス</b></span></q>
+    </div>
+    <div class="step slide" data-x="0" data-y="1000">
+      <q><strong>自己紹介</strong></q>
+      <span style="font-size:20pt;">
+        <u>セラク株式会社</u>　山口 浩太郎</br>
+        物理学科卒・数学応用数理専攻修了後エンジニアとして就業。</br>
+        その後、学士編入試験を志すも、エンジニアとしての可能性に気づき、
+        2017年株式会社セラクへ入社。</br>
+        エンジニアとしてのキャリアを再スタートし、
+        現在、企業内のクラウドシステム化を目指した研修業務に携わる。
+      </span>
+    </div>
+    <div id="ing" class="step slide" data-x="-1000" data-y="1000">
+      <q><strong>背景</strong></q>
+      <span style="font-size:20pt;">
+        理系出身者であれば論理的な思考ができるのか？</br>
+        </br>
+      </span>
+      <b class="rotating" style="font-size:60pt;">NO</b>
+    </div>
+    <div class="step slide" data-x="-1000" data-y="0">
+      <q><strong>目的</strong></q>
+      <span style="font-size:20pt;">
+        本講義が論理的思考を理解するためのきっかけとなること。</br>
+        そのため、厳密な定義は割愛し、平易な言葉やイメージで代用する。
+      </span>
+    </div>
+<!-- 論理的に考えるとは -->
+    <div class="step" data-x="-1000" data-y="-1000" data-scale="1">
+      <q><strong>論理的に考えるとは</strong></q>
+      <q>
+        <span style="font-size:20pt;">
+        </br><b>物事を集まりとして考えるということである。</b>
+        </span>
+        <img src="./images/002.png" style="max-width: 90%">
+      </q>
+      <!-- <img src="./images/002.png" style="max-width: 60%"> -->
+    </div>
+    <div class="step" data-x="0" data-y="-1000" data-scale="1">
+        <q><b>論理から連想されがちなもの</b></q>
+        <q>
+        <span style="font-size:20pt;">
+        <ul>
+          <li><b>語彙力</b></br>→特別な言葉による表現は重要ではない。</br>むしろ、基本的な接続詞を使いこなせることの方が本質に近い。</li>
+          <li><b>頭が固い・頭が良い</b></br>→人の性格や能力によらない。道具として万人に扱ってもらいたい。</li>
+        </ul>
+      </span>
+    </q>
+    </div>
+    <div class="step" data-x="1000" data-y="-1000" data-scale="1">
+      <q><b>集まりとして考えるとは？</b></q>
+      <ul>
+        <li><b>含まれる・含まれない</b>を考えるということ</li>
+        <li><b>包まれる・包まれない</b>を考えるということ</li>
+      </ul>
+    </div>
+    <div class="step" data-x="2000" data-y="-1000" data-scale="1">
+      <q><b>含まれる・含まれない</b></q>
+    </div>
+    <div class="step" data-x="2000" data-y="0" data-scale="1">
+      <q><b>含まれる</b></q>
+      <q style="text-align:center"><img src="./images/003.png" style="max-width: 100%"></q>
+    </div>
+    <div class="step" data-x="2000" data-y="1000" data-scale="1">
+      <q><b>含まれない</b></q>
+      <q style="text-align:center"><img src="./images/004.png" style="max-width: 100%"></q>
+    </div>
+    <div class="step" data-x="2000" data-y="2000" data-scale="1">
+      <q><b>包まれる・包まれない</b></q>
+    </div>
+    <div class="step" data-x="1000" data-y="2000" data-scale="1">
+      <q><b>包まれる</b></q>
+      <q style="text-align:center"><img src="./images/005.png" style="max-width: 100%"></q>
+    </div>
+    <div class="step" data-x="0" data-y="2000" data-scale="1">
+      <q><b>包まれない</b></q>
+      <q style="text-align:center"><img src="./images/006.png" style="max-width: 100%"></q>
+    </div>
+    <div class="step" data-x="-1000" data-y="2000" data-scale="1">
+      <q><b>集まりと同等の言葉を探そう</b></q>
+      <ul>
+        <li>条件</li>
+        <li>性質</li>
+        <li>必要</li>
+        <li>十分</li>
+        <li>目的</li>
+        <li>手段</li>
+      </ul>
+      ...etc
+    </div>
+<!-- 条件 -->
+<div class="step" data-x="-2000" data-y="2000" data-scale="1">
+  <q><strong>条件</strong></q>
+</div>
+<div class="step" data-x="-2000" data-y="1000" data-scale="1">
+    <q><b>条件から連想されるもの</b></q>
+    <ul>
+      <li>if文</li>
+      <li>switch-case文</li>
+      <li>募集要項</li>
+    </ul>
+    ...etc
+</div>
+  <!-- 条件_図解_条件は集合 -->
+<div class="step" data-x="-2000" data-y="0" data-scale="1">
+  <q style="text-align:center"><img src="./images/007.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="-2000" data-y="-1000" data-scale="1">
+  <q style="text-align:center"><img src="./images/008.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="-2000" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/009.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="-1000" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/010.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="0" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/011.png" style="max-width: 100%"></q>
+</div>
+  <!-- 条件_図解_集合は条件 -->
+<div class="step" data-x="1000" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/012.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="2000" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/013.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="3000" data-y="-2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/014.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="3000" data-y="-1000" data-scale="1">
+  <q style="text-align:center"><img src="./images/015.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="3000" data-y="0" data-scale="1">
+  <q style="text-align:center"><img src="./images/016.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="3000" data-y="1000" data-scale="1">
+  <q style="text-align:center"><img src="./images/017.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="3000" data-y="2000" data-scale="1">
+  <q style="text-align:center"><img src="./images/018.png" style="max-width: 100%"></q>
+</div>
+  <!-- 条件とは -->
+<div class="step slide" data-x="3000" data-y="3000" data-scale="1">
+  <q><strong>条件とは</strong></q>
+  <span style="font-size:20pt;">
+  </br>条件はその条件を満たすか否かによって物事の集まりを定める。 </br>
+    その一方で、物事の集まりはその集まりに含まれるか否かによって条件を定める。</br>
+    すなわち、<b>条件</b>とは<b>物事の集まり</b>そのものである。
+  </span>
+</div>
+<div class="step slide" data-x="2000" data-y="3000" data-scale="1">
+  <q><strong>表現の違い</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li><b>外延的記法（がいえんてききほう）</b></br>要素を１つ１つ並べて集まりを表現する記法</li>
+      <li><b>内包的記法（ないほうてききほう）</b></br>言葉や式で集まりを表現する記法</li>
+    </ul>
+  </span>
+</div>
+<div class="step slide" data-x="1000" data-y="3000" data-scale="1">
+  <q><strong>内包的記法についての補足</strong></q>
+  <span style="font-size:20pt;">
+    <ul>
+      <li>換言の重要性<br>「九州生まれ」</br>「沖縄、または鹿児島、または宮崎、または熊本、または大分、または福岡、または佐賀、または長崎生まれ」</li>
+      <li>同じ条件を判断することの難しさ</br>「この部屋にいる身長170cm以上の人」</br>「この部屋にいる身長171cm以上の人」</li>
+    </ul>
+  </span>
+</div>
+<!-- 状況整理 -->
+<div id="overview-set" class="step" data-x="0" data-y="0" data-scale="7">
+</div>
+<div class="step slide" data-x="0" data-y="3000" data-scale="1">
+  <q><strong>ここまで</strong></q>
+  <span style="font-size:18pt;">
+    条件というキーワードは物事の集まりであることを確認した。</br>
+    しかし、まだ、この考え方やキーワードがどのように論理へと結びつくのかわからない。。。
+  </span>
+  <q><strong>これから</strong></q>
+  <span style="font-size:18pt;">
+    この条件と「包まれる・包まれない」という概念から、</br>
+    必要や十分、そして目的や手段といったキーワードを理解し、</br>
+    それが論理と強い結びつきがあることを確認したい。
+  </span>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
-    right around the corner of this tag ;)
-    
-    ----------
-    Plugins: We set the default time for autoplay plugin to 6 seconds. Autoplay will automatically advance
-    to next slide after a timeout expires.
-    
--->
-<div id="impress" data-autoplay="7">
-
-    <!--
-        
-        Here is where interesting thing start to happen.
-        
-        Each step of the presentation should be an element inside the `#impress` with a class name
-        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
-        the 'camera' shows them on each step of the presentation.
-        
-        Positioning information is passed through data attributes.
-        
-        In the example below we only specify x and y position of the step element with `data-x="-1000"`
-        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
-        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
-        
-        It will not be rotated or scaled.
-        
-        --------
-        Plugins: For first slide, set the autoplay time to a custom 10 seconds.
-        
-    -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10">
-        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
-
-    <!--
-        
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        
-        So in the example below it'll be `step-2`.
-        
-        The hash part of the url when this step is active will be `#/step-2`.
-        
-        You can also use `#step-2` in a link, to point directly to this particular step.
-        
-        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
-        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-        
-    -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
-    </div>
-
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
-
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to its correct size.
-        
-    -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
-
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
-
-    <!--
-        
-        And now it gets really exciting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-        Note: data-x/y/z attributes, if not defined, by default will inherit the value of the 
-        previous step. So to get back to 0 on the z-axis, we must set it to 0.
-        See src/plugins/rel/README.md for more information.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <!--
-        
-        So to summarize of all the possible attributes used to position presentation steps, we have:
-        
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-        
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        
-    -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">
-    </div>
-
+<!-- 必要・十分 -->
+<div class="step" data-x="6000" data-y="6000" data-scale="1">
+  <q><strong>必要・十分</strong></q>
+</div>
+<div class="step" data-x="7000" data-y="6000" data-scale="1">
+  <q><strong>必要条件・十分条件</strong></q>
+  <span style="font-size:20pt;">
+  </br>高校数学で、必要条件・十分条件を勉強した方もいらっしゃるのでは？</br>
+  そう、必要・十分は条件、すなわち、物事の集まりである。
+  </span>
+</div>
+<!-- 必要について -->
+<div class="step" data-x="7000" data-y="7000" data-scale="1">
+  <q><strong>必要</strong></q>
+  <span style="font-size:20pt;">
+    </br>言葉の定義と日常用語としての意味に乖離があるため、</br>
+    意味や使われ方を再確認したい。
+  </span>
+</div>
+<div class="step" data-x="6000" data-y="7000" data-scale="1">
+  <q><strong>日常用語としての必要の意味</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>あればより良いこと。</li>
+      <li>経験的に必ず要る。</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="5000" data-y="7000" data-scale="1">
+  <q><strong>日常用語としての必要の使われ方</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>遠足には運動靴が必要だ。</li>
+      <li>遊園地には観覧車が必要だ。</li>
+      <li>紐を切るためにハサミが必要だ。</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="5000" data-y="6000" data-scale="1">
+  <q><strong>必要の定義</strong></q>
+  <span style="font-size:20pt;">
+  </br>必ず要ること。
+  </span>
+</div>
+<div class="step" data-x="5000" data-y="5000" data-scale="1">
+  <q><strong>日常用語としての必要の使われ方</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>遠足には運動靴が必要だ。</br>→<b>長靴で遠足に行く。</b></li>
+      <li>遊園地には観覧車が必要だ。</br>→<b>東京ディズニーランドには観覧車がない。</b></li>
+      <li>紐を切るためにハサミが必要だ。</br>→<b>カッターを使って紐を切断する。</b></li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="6000" data-y="5000" data-scale="1">
+  <q><strong>日常用語としての必要の使われ方</strong></q>
+  <span style="font-size:30pt;">
+  </br>すなわち、必ず要るという意味では用いられていない場合がある。</br>
+  <br>必要を論理の道具として使う場合には辞書的な意味で使ってもらいたい。
+  </span>
+</div>
+<!-- 十分につて -->
+<div class="step" data-x="7000" data-y="5000" data-scale="1">
+  <q><strong>十分の定義</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>不足のないさま。</li>
+      <li>必要なだけ、またはそれ以上あるさま。</li>
+    </ul>
+  </span>
+</div>
+<div class="step" data-x="8000" data-y="5000" data-scale="1">
+  <q><strong>十分の使われ方</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>倉庫には十分な量の食料がある。</li>
+      <li>君はこの仕事をするには十分な能力がある。</li>
+    </ul>
+    量や種類が多くある、または多くの条件を満たしているということ。
+  </span>
+</div>
+<div class="step" data-x="8000" data-y="6000" data-scale="1">
+  <q><strong>多くの条件が重なった時どうなるか？</strong></q>
+</div>
+<div class="step" data-x="8000" data-y="7000" data-scale="1">
+  <q style="text-align:center"><img src="./images/019.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="8000" data-y="8000" data-scale="1">
+  <q style="text-align:center"><img src="./images/020.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="7000" data-y="8000" data-scale="1">
+  <q style="text-align:center"><img src="./images/021.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="6000" data-y="8000" data-scale="1">
+  <q style="text-align:center"><img src="./images/022.png" style="max-width: 100%"></q>
+</div>
+<!-- 必要・十分について　-->
+<div class="step" data-x="5000" data-y="8000" data-scale="1">
+  <q><strong>必要・十分</strong></q>
+  <span style="font-size:20pt;">
+  </br>なぜ理解し辛いのか？
+  </span>
+</div>
+<div class="step" data-x="4000" data-y="8000" data-scale="1">
+  <q><strong>なぜならば、</strong></q>
+  <span style="font-size:20pt;">
+  </br>必要と十分を<b>セット</b>で考えていないため。</br>
+  必要と十分は単独では使用され<b>ない</b>。</br>
+  必要を扱う場合は、何が満たされる<b>ときに</b>必ず要るのかを考える。</br>
+  その何にあたるものが十分条件となる。</br>
+  一方で、十分を扱う場合は、十分である<b>ときに</b>何が満たされているのかを考える。</br>
+  その何にあたるものが必要条件となる。</br>
+  </span>
+</div>
+<!-- 主張を必要・十分に分ける。 -->
+<div class="step" data-x="4000" data-y="7000" data-scale="1">
+  <q><strong>主張には必要・十分の構造をとるものが多くある</strong></q>
+  <span style="font-size:20pt;">
+  </br><b>例）この特製チーズケーキは食べてみなければ味がわからない。</b>
+  </span>
+</div>
+<div class="step" data-x="4000" data-y="6000" data-scale="1">
+  <q><strong>何についての主張なのかを整理する</strong></q>
+</br><q style="text-align:center"><img src="./images/023.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="4000" data-y="5000" data-scale="1">
+  <q><strong>条件を探す</strong></q>
+</br><q style="text-align:center"><img src="./images/024.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="4000" data-y="4000" data-scale="1">
+  <q><strong>条件を探す</strong></q>
+  </br><q style="text-align:center"><img src="./images/025.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="5000" data-y="4000" data-scale="1">
+  <q><strong>包む包まれるの関係を整理する</strong></q>
+  </br><q style="text-align:center"><img src="./images/026.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="6000" data-y="4000" data-scale="1">
+  <q><strong>主張が正しくない時</strong></q>
+  </br><q style="text-align:center"><img src="./images/027.png" style="max-width: 100%"></q>
+</div>
+<div id="overview-relation" class="step" data-x="6000" data-y="6000" data-scale="5">
 </div>
 
-<!--
-    This is a UI plugin. You can read more about plugins in src/plugins/README.md.
-    For now, I'll just tell you that this adds some graphical controls to navigate the
-    presentation. In the CSS file you can style them as you want. We've put them bottom right.
--->
+<!-- 目的・手段 -->
+<div class="step" data-x="10000" data-y="10000" data-scale="1">
+  <q><strong>目的・手段</strong></q>
+  <span style="font-size:20pt;">
+  </br>良く見聞きするが、必要と同様に、意味があいまいなまま使われていることが多い。
+  </span>
+</div>
+<div class="step" data-x="11000" data-y="10000" data-scale="1">
+  <q><strong>目的・手段の可視化</strong></q>
+  <span style="font-size:20pt;">
+  </br>必要・十分を用いて、目的・手段の関係を可視化する。
+  </span>
+</div>
+<div class="step" data-x="11000" data-y="11000" data-scale="1">
+  <q style="text-align:center"><img src="./images/028.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="10000" data-y="11000" data-scale="1">
+  <q style="text-align:center"><img src="./images/029.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="9000" data-y="11000" data-scale="1">
+  <q style="text-align:center"><img src="./images/030.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="9000" data-y="10000" data-scale="1">
+  <q style="text-align:center"><img src="./images/031.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="9000" data-y="9000" data-scale="1">
+  <q style="text-align:center"><img src="./images/032.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="10000" data-y="9000" data-scale="1">
+  <q style="text-align:center"><img src="./images/033.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="11000" data-y="9000" data-scale="1">
+  <q style="text-align:center"><img src="./images/034.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="12000" data-y="9000" data-scale="1">
+  <q style="text-align:center"><img src="./images/035.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="12000" data-y="10000" data-scale="1">
+  <q style="text-align:center"><img src="./images/036.png" style="max-width: 100%"></q>
+</div>
+<div class="step" data-x="12000" data-y="11000" data-scale="1">
+  <q><strong>目的・手段を語るには</strong></q>
+  <span style="font-size:30pt;">
+    <ul>
+      <li>必要・十分を用いてその論理的構造を可視化する。</li>
+      <li>合目的的であるか否かに注意する。</li>
+    </ul>
+  </span>
+</div>
+<div id="overview-purpose" class="step" data-x="10000" data-y="10000" data-scale="9">
+</div>
+
+<!-- 全体_まとめ -->
+<div id="overview" class="step" data-x="5000" data-y="5000" data-scale="20">
+</div>
+
+
+</div>
 <div id="impress-toolbar"></div>
-
-<!--
-    
-    Hint is not related to impress.js in any way.
-    
-    But it can show you how to use impress.js features in creative way.
-    
-    When the presentation step is shown (selected) its element gets the class of "active" and the body element
-    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
-    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
-    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
-    
-    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
-    the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
--->
 <div class="hint">
-    <p>Use a spacebar or arrow keys to navigate. <br/>
-       Press 'P' to launch speaker console.</p>
+    <q>～論理的に考えるためのヒント～</q>
 </div>
 <script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<q>Swipe left or right to navigate</q>";
 }
 </script>
-
-<!--
-    
-    Last, but not least.
-    
-    To make all described above really work, you need to include impress.js in the page.
-    I strongly encourage to minify it first.
-    
-    In here I just include full source of the script to make it more readable.
-    
-    You also need to call a `impress().init()` function to initialize impress.js presentation.
-    And you should do it in the end of your document. Not only because it's a good practice, but also
-    because it should be done when the whole document is ready.
-    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
-    
--->
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
-
-<!--
-    
-    The `impress()` function also gives you access to the API that controls the presentation.
-    
-    Just store the result of the call:
-    
-        var api = impress();
-    
-    and you will get three functions you can call:
-    
-        `api.init()` - initializes the presentation,
-        `api.next()` - moves to next step of the presentation,
-        `api.prev()` - moves to previous step of the presentation,
-        `api.goto( stepIndex | stepElementId | stepElement, [duration] )` - moves the presentation to the step given by its index number
-                id or the DOM element; second parameter can be used to define duration of the transition in ms,
-                but it's optional - if not provided default transition duration for the presentation will be used.
-    
-    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
-    Don't worry, it wont initialize the presentation again.
-    
-    For some example uses of this API check the last part of the source of impress.js where the API
-    is used in event handlers.
-    
--->
-
 </body>
 </html>
-
-<!--
-    
-    Now you know more or less everything you need to build your first impress.js presentation, but before
-    you start...
-    
-    Oh, you've already cloned the code from GitHub?
-    
-    You have it open in text editor?
-    
-    Stop right there!
-    
-    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
-    first needs to grow in your mind.
-    
-    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
-    
-    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
-    to present. It will get you closer and closer to the layout you'll build later with impress.js.
-    
-    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
-    it earlier, because you'll only waste your time fighting with positioning of useless points.
-    
-    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
-    creating awesome and engaging presentations.
-    
-    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
-    
--->
-
-<!--
-    
-    Are you still reading this?
-    
-    For real?
-    
-    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
-    to congratulate you personally :)
-    
-    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
-    or anything you like to drink. And raise a glass for me ;)
-    
-    Cheers!
-    
--->
-
